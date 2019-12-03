@@ -4,6 +4,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.test.core.app.ActivityScenario
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.click
+import androidx.test.espresso.assertion.ViewAssertions.doesNotExist
 import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.contrib.RecyclerViewActions.actionOnItemAtPosition
 import androidx.test.espresso.matcher.ViewMatchers.*
@@ -51,5 +52,37 @@ class LearnRecyclerViewActivityTest {
         onView(withId(R.id.learnRecyclerView))
             .perform(actionOnItemAtPosition<LearnRecyclerViewAdapter.MyViewHolder>(30, click()));
         onView(withText("Anand Kumar")).check(matches(isDisplayed()))
+    }
+
+    @Test
+    fun listItemNotDisplayedCompletely() {
+        onView(withText(lastItemPositionThirty)).check(doesNotExist())
+    }
+
+    @Test
+    fun listItemDisplayedCompletely() {
+        onView(withId(R.id.learnRecyclerView)).perform(
+            actionOnItemAtPosition<LearnRecyclerViewAdapter.MyViewHolder>(
+                30,
+                click()
+            )
+        )
+        onView(withText(lastItemPositionThirty)).check(matches(isDisplayed()))
+    }
+
+    @Test
+    fun clickInsideRecyclerViewItem() {
+        onView(withId(R.id.learnRecyclerView)).perform(
+            actionOnItemAtPosition<LearnRecyclerViewAdapter.MyViewHolder>(
+                0,
+                MyViewAction.clickChildViewWithId(R.id.tvName)
+            )
+        )
+    }
+
+    companion object {
+        var firstItemPositionZero: String = "Arun Kumar"
+        var middleItemPositionNine: String = "Louis Kutty"
+        var lastItemPositionThirty: String = "Anand Kumar"
     }
 }
