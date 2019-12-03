@@ -10,3 +10,7 @@ https://github.com/android/testing-samples
 View Action
 
 https://stackoverflow.com/questions/28476507/using-espresso-to-click-view-inside-recyclerview-item
+
+Idling Resources
+
+https://android.jlelse.eu/integrate-espresso-idling-resources-in-your-app-to-build-flexible-ui-tests-c779e24f5057
