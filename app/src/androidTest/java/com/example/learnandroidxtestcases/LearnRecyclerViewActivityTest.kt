@@ -80,6 +80,16 @@ class LearnRecyclerViewActivityTest {
         )
     }
 
+    @Test
+    fun clickInsideRecyclerViewItemToggleButton() {
+        onView(withId(R.id.learnRecyclerView)).perform(
+            actionOnItemAtPosition<LearnRecyclerViewAdapter.MyViewHolder>(
+                5,
+                MyViewAction.clickChildViewWithId(R.id.btnSwitch)
+            )
+        )
+    }
+
     companion object {
         var firstItemPositionZero: String = "Arun Kumar"
         var middleItemPositionNine: String = "Louis Kutty"
