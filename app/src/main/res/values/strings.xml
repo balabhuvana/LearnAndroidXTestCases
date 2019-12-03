@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">LearnAndroidXTestCases</string>
+    <string name="hello_world">Hello World</string>
+    <string name="welcome_screen">Welcome Screen</string>
+    <string name="toast_button">Toast Button</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="home_screen">Home Screen</string>
+    <string name="launch_home">Launch Home</string>
+    <string name="name_arun">Arun Kumar</string>
+    <string name="change_text">Change Text</string>
+    <string name="type_text">Type text</string>
+    <string name="next_screen_change_text">Next screen change</string>
+    <string name="validate_text">Validate Text</string>
+    <string name="error_text">Error Text</string>
+    <string name="success_text">Success Text</string>
+
+    <string name="instructions">See MainActivity.java for valid options or type something ending
+        in \"coffee\".
+    </string>
+    <string name="hint">How do you like your coffee?</string>
+    <string name="validate">Validate</string>
+    <string name="good_choice">Good choice!</string>
+    <string name="bad_choice">Bad choice!</string>
+</resources>
