@@ -55,7 +55,7 @@ class LearnRecyclerViewAdapter(val context: Context, val myDataset: ArrayList<St
         if (position == 5) {
             holder.btnSwitch?.visibility = View.VISIBLE
 
-            holder.btnSwitch?.setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener { buttonView, isChecked ->
+            holder.btnSwitch?.setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener { _, isChecked ->
                 if (isChecked) { // The toggle is enabled
                     Toast.makeText(context, "True" + myDataset[position], Toast.LENGTH_LONG).show()
                 } else { // The toggle is disabled
