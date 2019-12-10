@@ -26,4 +26,21 @@
     <string name="dial">Dial</string>
     <string name="dial_permission_not_available">Permission not available</string>
     <string name="pick_contact">Pick Contact</string>
+
+    <string name="start_private_activity">Start Private Process Activity</string>
+    <string name="click_me">Click Me!</string>
+    <string name="button_clicked">Button clicked!</string>
+    <string name="type_something">type something…</string>
+    <string name="waiting_msg">Waiting for message…</string>
+    <string name="list_selection">Selected: %1$s</string>
+
+    <string-array name="list_items">
+        <item>Espresso</item>
+        <item>Doppio</item>
+        <item>Macchiato</item>
+        <item>Cappuccino</item>
+        <item>Americano</item>
+        <item>Mocha</item>
+        <item>Latte</item>
+    </string-array>
 </resources>
