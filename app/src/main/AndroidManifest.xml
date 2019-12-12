@@ -3,6 +3,7 @@
     package="com.example.learnandroidxtestcases">
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -11,20 +12,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".activity.PrivateProcessActivity"
-            android:process=":PID2"/>
-        <activity android:name=".activity.DefaultProcessActivity">
+        <activity android:name=".activity.CameraScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activity.PrivateProcessActivity"
+            android:process=":PID2" />
+        <activity android:name=".activity.DefaultProcessActivity" />
         <activity android:name=".activity.ContactsActivity" />
         <activity
             android:name=".activity.DialerActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".activity.LearnIdlingResourceActivity" />
         <activity android:name=".activity.CustomTextMatcherActivity" />
         <activity android:name=".activity.EdittextNextActivity" />
