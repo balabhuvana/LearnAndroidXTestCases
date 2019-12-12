@@ -29,7 +29,7 @@ class CameraScreenActivityTest {
 
     @Rule
     @JvmField
-    var grantPermissionRule = GrantPermissionRule.grant(Manifest.permission.CAMERA)
+    var grantPermissionRule: GrantPermissionRule = GrantPermissionRule.grant(Manifest.permission.CAMERA)
 
     @Rule
     @JvmField
@@ -38,7 +38,7 @@ class CameraScreenActivityTest {
 
     @Before
     fun setUp() {
-        var activityResult = createImageCaptureActivityResultStub()
+        val activityResult = createImageCaptureActivityResultStub()
         Intents.intending(hasAction(MediaStore.ACTION_IMAGE_CAPTURE)).respondWith(activityResult)
     }
 
@@ -52,12 +52,12 @@ class CameraScreenActivityTest {
         onView(withId(R.id.ivCaptureImage)).check(matches(hasDrawable()))
     }
 
-    fun createImageCaptureActivityResultStub(): ActivityResult {
+    private fun createImageCaptureActivityResultStub(): ActivityResult {
         val bundle = Bundle()
         // Image should be in .png format not in xml format. if we use xml it will be null
         bundle.putParcelable(
             CameraScreenActivity.KEY_IMAGE_DATA, BitmapFactory.decodeResource(
-                cameraIntentsTestRule.getActivity().getResources(),
+                cameraIntentsTestRule.activity.getResources(),
                 R.drawable.ic_launcher
             )
         )
