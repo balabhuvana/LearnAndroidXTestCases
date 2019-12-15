@@ -7,7 +7,7 @@
     tools:context=".activity.SuggestedActivity">
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvSuugestedTitle"
+        android:id="@+id/tvSuggestedTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/pick_water"
@@ -23,6 +23,6 @@
         android:completionThreshold="1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvSuugestedTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/tvSuggestedTitle" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
